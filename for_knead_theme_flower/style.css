@@ -1,0 +1,357 @@
+
+@charset "utf-8";
+/*
+theme Name: for knead theme flower by NeriErakis
+Author: NeriErakis
+Description: for knead theme
+version： 0.0.3
+*/
+
+
+body {
+/*フォントの指定*/
+font-family: "ヒラギノ丸ゴ ProN", Helvetica, YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+/*サイト全体のフォントサイズを指定*/
+font-size: 16px;
+/*行間の指定*/
+line-height: 1.7;
+/*サイト全体にかかるmarginをリセット*/
+margin: 0;
+/*サイト全体にかかるpaddingをリセット*/
+padding: 0;
+
+/*サイトのデフォルトとなる文字の色を指定*/
+  color: #440009;
+
+  background: -moz-linear-gradient(top, rgba(255, 219, 210, 0.7), rgba(255, 250, 241, 0.7) 30%, rgba(255, 205, 188, 0.7) 60%, rgba(255, 191, 197, 0.7) 80%),url("assets/images/dotAI1pink256.jpg");
+  background: -webkit-linear-gradient(top, rgba(255, 219, 210, 0.7), rgba(255, 250, 241, 0.7) 30%, rgba(255, 205, 188, 0.7) 60%, rgba(255, 191, 197, 0.7) 80%),url("assets/images/dotAI1pink256.jpg");
+  background: linear-gradient(to bottom, rgba(255, 219, 210, 0.7), rgba(255, 250, 241, 0.7) 30%, rgba(255, 236, 219, 0.7) 60%, rgba(255, 191, 197, 0.7) 80%),url("assets/images/dotAI1pink256.jpg");
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: bold;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+
+
+header h1 {
+  margin:auto;
+  text-align: center;
+}
+
+#logo {
+  height: 100px;
+  background-image: url("assets/images/top_banner.png");
+  background-repeat: no-repeat;
+  display: block;
+  width:400px;
+  margin:auto;
+}
+
+.menu{
+  margin: auto;
+  width:500px;
+  height:100px;
+}
+
+.menu ul {
+  height:40px;
+  width:450px;
+  list-style: none;
+  margin-left: 20px;
+}
+.menu ul li {
+  float:left;
+  margin: auto;
+}
+a {
+  color: #ff99b4;
+  text-decoration: none;
+}
+
+
+
+.menu a {
+  padding:10px 15px;
+  color: #440009;
+  text-decoration: none;
+  font-size:14px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+
+}
+.menu a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1.5px;
+  background-color: #cc0100;
+  transition: .3s;
+}
+.menu a:hover::after {
+  width: 100%;
+}
+
+header h2 {
+  font-size: 14px;
+  font-family: 'Montserrat',sans-serif;
+  height: 15px;
+  text-align:center;
+}
+
+/*コンテンツのサイズ指定*/
+.header-inner, .container,.footer-inner,footer,header {
+max-width: 1300px;
+margin-right: auto;
+margin-left: auto;
+
+}
+
+/*メインコンテンツとサイドバーを横並びにする*/
+.contents {
+  float: left;
+  border-color: yellow;
+  width: 70%;
+  }
+#sidebar {
+  float: left;
+  border-color: yellow;
+  width: 30%;
+}
+/*子要素の高さを合わせる*/
+.container {
+  display: flex;
+}
+.contents {
+  background: #fffaf1;
+ }
+
+#sidebar{
+  background: #fffaf1;
+
+}
+
+#my_sidebar_widgetS {
+  padding:10px;
+}
+
+footer{
+  margin-top:15px;
+  margin-bottom:5px;
+  background: #fffaf1;
+}
+
+.footer-inner{
+   min-height: 150px;
+ }
+
+.report_list {
+  margin: 7px 7px 15px;
+  border: solid 1px #ddd;
+  background: -moz-linear-gradient(top, rgba(255, 235, 223, 0.8), rgba(255, 235, 223, 0.8) 30%);
+  background: -webkit-linear-gradient(top, rgba(255, 235, 223, 0.8), rgba(255, 235, 223, 0.8) 30%);
+  background: linear-gradient(to bottom, rgba(255, 235, 223, 0.8), rgba(255, 235, 223, 0.8) 30%);
+  border: #ffdbd2 1px solid;
+}
+
+.report_list a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.report_list a:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.report_list a:hover {
+  /*background-color: #fdeff2;*/
+  background: -moz-linear-gradient(top, rgba(255, 235, 223, 0.4), rgba(255, 219, 210, 0.8) 30%);
+  background: -webkit-linear-gradient(top, rgba(255, 235, 223, 0.4), rgba(255, 205, 188, 0.8) 30%);
+  background: linear-gradient(to bottom, rgba(255, 235, 223, 0.4), rgba(255, 219, 210, 0.8) 30%);
+  border: #ffcdbc 1px solid;
+}
+
+.report_list img {
+  float: left;
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.report_list .report_text {
+  width: auto;
+}
+
+.report_list h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.report_date {
+  font-size: .8em;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.report_category {
+  font-size: .6em;
+  padding: 3px 5px;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #eaadbd;
+}
+
+.report_list p {
+  font-size: .8em;
+  margin: 10px 0 0;
+}
+
+
+.contents > h1 {
+font-size: 1.5em;
+margin: 20px;
+}
+
+
+
+.report {
+  font-size: 1em;
+  margin: 0;
+  padding: 0 25px 25px;
+}
+
+.report_info .report-category a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.report_info .report-category a:hover {
+  opacity: .8;
+}
+
+.kiji-img {
+  max-width: 640px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+
+/*タグ*/
+
+.kiji-tag {
+  text-align: right;
+}
+
+.kiji-tag ul {
+  list-style: none;
+}
+
+.kiji-tag li {
+  display: inline-block;
+  color: #464646;
+}
+
+.kiji-tag li a {
+  font-size: .8em;
+  margin-right: 7px;
+  padding: 2px 7px;
+  text-decoration: none;
+  color: #464646;
+  border: solid 1px #464646;
+  border-radius: 2px;
+}
+
+.kiji-tag li a:hover {
+  opacity: .8;
+}
+
+.report p {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.report h1 {
+  font-size: 1.7em;
+  margin: .3em 0;
+}
+
+.report h2 {
+  font-size: 1.5em;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  padding: .4em 0;
+  border-bottom: solid 5px #464646;
+}
+
+.report h3 {
+  font-size: 1.35em;
+  margin-top: 2.5em;
+  margin-bottom: 1.5em;
+  padding: 0 .5em;
+  border-left: solid 5px #777777;
+  background: transparent;
+}
+
+.report h4 {
+  font-size: 1.2em;
+  margin: 0 0 .3em;
+}
+
+.report h5 {
+  font-size: 1.1em;
+  margin: 0 0 .3em;
+}
+
+
+/*サイドバータイトル*/
+.widget-title:before {
+  content: url("assets/images/icon033-1/icon033_10_pink.png");
+  /*width:15px;
+  height:15px;*/
+  margin-right:5px;
+}
+.widget-title {
+  position: relative;
+  padding: 0.25em 0;
+  font-size:16px;
+}
+.widget-title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
+
+ul {
+  list-style: none;
+  padding : 0px 15px;
+}
+
+.footer_label {
+  margin-top:110px;
+  float:right;
+  display:inline-block;
+  margin-right:15px;
+}
+.report_info {
+  margin-top:15px;
+}
