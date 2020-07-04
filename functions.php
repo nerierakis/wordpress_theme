@@ -15,6 +15,21 @@ function arphabet_widgets_init() {
     ) );
 }*/
 
+/*https://agohack.com/wp-enqueue-script-and-style/*/
+
+
+//function my_scripts() {
+//	// 自作jsファイルの読み込み
+//	wp_enqueue_script( 'my-script', get_theme_file_uri('/js/script.js') );
+//	// CDNから「jquery.cookie.js」を読み込む
+//	//wp_enqueue_script( 'jquery-cookie', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array('jquery'), '1.4.1', true);
+//}
+//add_action( 'wp_enqueue_scripts', 'my_scripts' );
+
+
+
+
+
 
 function knead_widgets_init() {
 	register_sidebar(
