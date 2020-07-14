@@ -31,7 +31,7 @@ body {
 }
 
 /*背景色の指定*/
-body, contents,#sidebar {
+body, main_contents,#sidebar {
     /*background: #eaeaea;*/
     background: #F7EFE3;
     /*
@@ -106,18 +106,15 @@ header {
     left: 0;
     z-index: 2;
     width: 100%;
-    height:120px;
-    margin-bottom: 300px;
+    height:60px;
     background: #970747;
 }
 
 
 /*ヘッダー部メニュー（ロゴも内包されている）*/
 .menu {
-    margin: 25px;
     /*ヘッダー内部の横幅*/
     width: 100%;
-    height: 100px;
 }
 
 /*サイト名*/
@@ -125,8 +122,7 @@ header {
     margin: auto;
     float: left;
     color: #fef4e8;
-    line-height: 1.4;
-    margin: 10px;
+    line-height: 1.7;
     width: 200px;
 }
 
@@ -139,7 +135,6 @@ header {
 /*ヘッダーメニュー*/
 .menu ul {
     display: inline-block;
-    margin-top: 10px;
     margin-right: 100px;
     float: right;
 }
@@ -148,7 +143,6 @@ header {
     display: inline-block;
     list-style: none;
     margin-right: 40px;
-    padding: 10px;
 }
 
 /*ヘッダーメニューの文字色*/
@@ -183,19 +177,20 @@ header {
 
 /*========================= main contents ================================*/
 
-.contents {
+.main_contents {
     float: left;
-    width: 70%;
+    /*width: 70%;*/
 }
 
 /*記事を3分割*/
+/*1024以上はタイル型レイアウト*/
 .report_contents {
     display: grid;
     gap: 26px;
     /*横幅の最小値は240px*/
     grid-template-columns: repeat(3, minmax(240px, 1fr));
-    grid-template-rows: repeat(3, minmax(200px, 1fr));
-
+    grid-template-rows: repeat(5, minmax(200px, 1fr));
+    min-height: 90%;
 }
 
 /*記事リスト部分*/
@@ -310,6 +305,7 @@ article:nth-child(9n) .report_list_footer_info {
 .report_excerpt {
     min-height:45%;
     max-height: 45%;
+    word-break:break-word;
 }
 
 /*カテゴリー装飾*/
@@ -351,16 +347,20 @@ article:nth-child(9n) .report_list_footer_info {
     font-size: 1rem;
 }
 
+.row {
+    margin-right:0 !important;
+    margin-left: 0 !important;
+}
 
 /*サイドバー*/
 #sidebar {
     float: left;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 /*子要素の高さを合わせる*/
 .container {
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
 }
 
@@ -452,6 +452,20 @@ footer {
 }
 
 
+.report_text {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.report_text:hover {
+    box-shadow: 0px 15px 15px 0px #bdbdbd;
+    background: #fff3e7;
+    color: #a61800;
+    transform: translateY(-2px);
+}
+.report_title_inner:hover {
+    color:#ffffff;
+}
 
 /*
 
@@ -613,8 +627,6 @@ margin: 20px;
 /*サイドバータイトル*/
 .widget-title:before {
     content: url("assets/images/icon033-1/icon033_10_pink.png");
-    /*width:15px;
-    height:15px;*/
     margin-right: 5px;
 }
 
@@ -628,14 +640,21 @@ margin: 20px;
     content: "";
     display: block;
     height: 4px;
-    background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
-    background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+    background: -webkit-linear-gradient(to right, rgb(166, 24, 0), #ff9310);
+    background: linear-gradient(to right, rgb(166, 24, 0), #ff9310);
 }
-
 
 ul {
     list-style: none;
-    /*padding : 0px 15px;*/
+    padding : 0px 15px;
+}
+
+.imomy_widgets li:before {
+    content: url("assets/images/icon033-1/icon033_10_orange.png");
+    margin-right: 5px;
+}
+.imomy_widgets li {
+    word-break: break-word;
 }
 
 .footer_label {
@@ -647,4 +666,42 @@ ul {
 
 .report_info {
     margin-top: 15px;
+}
+
+#more-button {
+    background: #eee;
+    height: 56px;
+    margin: 40px 0 0;
+    width: 100%;
+}
+
+.scroller-status {
+    display: none;
+    margin-top: 40px;
+}
+
+.infinite-scroll-request {
+    animation: scroll-request 1.1s infinite linear;
+    border: 4px solid #00b8d4;
+    border-left: 4px solid #fff;
+    border-radius: 50%;
+    height: 48px;
+    margin: auto;
+    width: 48px;
+}
+
+@keyframes scroll-request {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.infinite-scroll-last,
+.infinite-scroll-error {
+    color: #757575;
+    text-align: center;
 }

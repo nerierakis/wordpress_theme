@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!--font-awesomeのスタイルシートの呼び出し-->
+    <title><?php bloginfo( 'name' ); ?></title>
 
 	<?php wp_head(); ?><!--システム・プラグイン用-->
 </head>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/infinite-scroll.js"></script>
+
+
 <body <?php body_class(); ?>>
 <!--<div class="head_contents">-->
 <!--    <div class="back_img">-->
@@ -19,6 +23,10 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</div>-->
+
+<h1>ボタンの練習</h1>
+<a href="#" class="btn btn-success">ボタン</a>
+<a href="#" class="btn btn-warning">ボタン</a>
 <header>
     <div class="header_inner">
         <div class="logo_area">
