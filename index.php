@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class="container">
-    <div class="main_contents row col-xl-9 bg-info">
+<div class="container row">
+    <div class="main_contents col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 bg-info">
 		<?php if ( is_category() || is_tag() ): ?>
             <h1 class="report_category_label"><?php single_cat_title() ?>の記事一覧</h1>
 		<?php elseif ( is_year() ): ?>
@@ -22,6 +22,8 @@
 	    <?php if ( $query->have_posts() ): ?>
         <div class="report_contents">
 		    <?php while ( $query->have_posts() ):
+
+
 			    $query->the_post(); ?>
 
 
@@ -89,6 +91,9 @@
 //		    ) ); ?>
 <!--        </div>-->
     </div>
+
+    <div class="row col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 bg-success">
 	<?php get_sidebar(); ?>
+    </div>
 </div>
 <?php get_footer(); ?>

@@ -184,24 +184,50 @@ header {
 
 /*記事を3分割*/
 /*1024以上はタイル型レイアウト*/
-.report_contents {
-    display: grid;
-    gap: 26px;
-    /*横幅の最小値は240px*/
-    grid-template-columns: repeat(3, minmax(240px, 1fr));
-    grid-template-rows: repeat(5, minmax(200px, 1fr));
-    min-height: 90%;
+@media screen and (min-width: 1024px) {
+    /* 1024px以上に適用されるCSS */
+    .report_contents {
+        display: grid;
+        gap: 26px;
+        /*横幅の最小値は240px*/
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        grid-template-rows: repeat(5, minmax(200px, 1fr));
+        min-height: 90%;
+    }
+}
+/*1024未満であれば横型レイアウト*/
+@media screen and (max-width: 1023px) {
+    /* 1024px以上に適用されるCSS */
+    .report_contents {
+        background:red !important;
+    }
 }
 
-/*記事リスト部分*/
-.report_list {
-    margin-left: 7px;
-    margin-right: 7px;
-    border-top: solid 5px #eaeaea;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    background: #ffffff;
-    height: 270px;
+
+
+@media screen and (min-width: 1024px) {
+    /* 1024px以上に適用されるCSS */
+    /*記事リスト部分*/
+    .report_list {
+        margin-left: 7px;
+        margin-right: 7px;
+        border-top: solid 5px #eaeaea;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+        background: #ffffff;
+        height: 270px;
+    }
 }
+
+@media screen and (max-width: 1023px) {
+    /*記事リスト部分*/
+    .report_list {
+        margin: 15px;
+        border-top: solid 5px #eaeaea;
+        background: #ffffff;
+        height: 270px;
+    }
+}
+
 
 /*記事タイトル部分背景色*/
 article:nth-child(even) .report_title {
@@ -419,6 +445,7 @@ footer {
     word-wrap: break-word;
     font-size: 16px;
     font-size: 1rem;
+    min-height: 100%;
 }
 
 
